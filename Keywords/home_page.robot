@@ -36,12 +36,12 @@ user verify final price
 
 user add 5-kg of broklli to add to card
     click button    ${AddTo-card-button}
-    sleep    2s
+    sleep    3s
 user click on cart icon
     click element    ${cart-icon}
-    sleep    2s
+    sleep    3s
 user click on procced to checkout button
     element should be visible    ${processToCheckout-Button}
-    sleep   2s
+    sleep   3s
     click button    ${processToCheckout-Button}
-    sleep    2s
+    sleep    3s
