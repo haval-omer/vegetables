@@ -50,4 +50,4 @@ user select condition and agreements
     sleep    3s
 user click on proceed button
     click button    ${proceed_button}
-    sleep    3s
+    sleep    2s
