@@ -43,11 +43,11 @@ user select iraq in choose country
     click element    ${select_element}
     sleep    5s
     select from list by value  ${select_element}   Iraq
-    sleep    3s
+    sleep    2s
 
 user select condition and agreements
     select checkbox    ${select_agreements}
-    sleep    3s
+    sleep    2s
 user click on proceed button
     click button    ${proceed_button}
     sleep    2s
