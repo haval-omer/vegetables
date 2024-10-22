@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on darwin)" generated="20241020 03:01:08.919" rpa="false" schemaversion="4">
+<suite id="s1" name="Run" source="/Users/havalomer/PycharmProjects/vegetables/Tests/run.robot">
+<test id="s1-t1" name="run and buy 5-kg of Brocolli" line="6">
+<kw name="user open web site" library="home_page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20241020 03:01:08.977" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/seleniumPractise/#/'.</msg>
+<status status="PASS" starttime="20241020 03:01:08.977" endtime="20241020 03:01:11.100"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20241020 03:01:11.101" endtime="20241020 03:01:14.997"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:08.976" endtime="20241020 03:01:14.997"/>
+</kw>
+<kw name="user select 5-kg of brocolli" library="home_page">
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>4</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${increment-path}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:14.999" level="INFO">Clicking element '//div[@class='product' and h4[contains(text(),'Brocolli - 1 Kg')]]/div[@class='stepper-input']//a[@class='increment']'.</msg>
+<status status="PASS" starttime="20241020 03:01:14.998" endtime="20241020 03:01:15.059"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:14.998" endtime="20241020 03:01:15.059"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${increment-path}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.060" level="INFO">Clicking element '//div[@class='product' and h4[contains(text(),'Brocolli - 1 Kg')]]/div[@class='stepper-input']//a[@class='increment']'.</msg>
+<status status="PASS" starttime="20241020 03:01:15.059" endtime="20241020 03:01:15.087"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:15.059" endtime="20241020 03:01:15.087"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${increment-path}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.087" level="INFO">Clicking element '//div[@class='product' and h4[contains(text(),'Brocolli - 1 Kg')]]/div[@class='stepper-input']//a[@class='increment']'.</msg>
+<status status="PASS" starttime="20241020 03:01:15.087" endtime="20241020 03:01:15.115"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:15.087" endtime="20241020 03:01:15.115"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${increment-path}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.116" level="INFO">Clicking element '//div[@class='product' and h4[contains(text(),'Brocolli - 1 Kg')]]/div[@class='stepper-input']//a[@class='increment']'.</msg>
+<status status="PASS" starttime="20241020 03:01:15.115" endtime="20241020 03:01:15.145"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:15.115" endtime="20241020 03:01:15.145"/>
+</iter>
+<status status="PASS" starttime="20241020 03:01:14.998" endtime="20241020 03:01:15.145"/>
+</for>
+<status status="PASS" starttime="20241020 03:01:14.997" endtime="20241020 03:01:15.145"/>
+</kw>
+<kw name="user verify product name" library="home_page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name}</var>
+<arg>${Brocolli_product_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.158" level="INFO">${product_name} = Brocolli - 1 Kg</msg>
+<status status="PASS" starttime="20241020 03:01:15.145" endtime="20241020 03:01:15.158"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_name}</arg>
+<arg>Brocolli - 1 Kg</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:15.158" endtime="20241020 03:01:15.158"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:15.145" endtime="20241020 03:01:15.158"/>
+</kw>
+<kw name="user verify quantity" library="home_page">
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${q}</var>
+<arg>${quantity-path}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.170" level="INFO">${q} = 5</msg>
+<status status="PASS" starttime="20241020 03:01:15.159" endtime="20241020 03:01:15.170"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<arg>${q}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" starttime="20241020 03:01:15.170" endtime="20241020 03:01:15.170"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${q}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20241020 03:01:15.170" endtime="20241020 03:01:15.170"/>
+</kw>
+<return>
+<value>${q}</value>
+<status status="PASS" starttime="20241020 03:01:15.170" endtime="20241020 03:01:15.170"/>
+</return>
+<status status="PASS" starttime="20241020 03:01:15.158" endtime="20241020 03:01:15.170"/>
+</kw>
+<kw name="user verify single price" library="home_page">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>${Brocolli_price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.179" level="INFO">${price} = 120</msg>
+<status status="PASS" starttime="20241020 03:01:15.170" endtime="20241020 03:01:15.179"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<arg>${price}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" starttime="20241020 03:01:15.179" endtime="20241020 03:01:15.179"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${price}</arg>
+<arg>120</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20241020 03:01:15.179" endtime="20241020 03:01:15.179"/>
+</kw>
+<return>
+<value>${price}</value>
+<status status="PASS" starttime="20241020 03:01:15.179" endtime="20241020 03:01:15.179"/>
+</return>
+<status status="PASS" starttime="20241020 03:01:15.170" endtime="20241020 03:01:15.179"/>
+</kw>
+<kw name="user verify final price" library="home_page">
+<kw name="user verify single price" library="home_page">
+<var>${item-price}</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${price}</var>
+<arg>${Brocolli_price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.186" level="INFO">${price} = 120</msg>
+<status status="PASS" starttime="20241020 03:01:15.180" endtime="20241020 03:01:15.186"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<arg>${price}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" starttime="20241020 03:01:15.187" endtime="20241020 03:01:15.187"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${price}</arg>
+<arg>120</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20241020 03:01:15.187" endtime="20241020 03:01:15.187"/>
+</kw>
+<return>
+<value>${price}</value>
+<status status="PASS" starttime="20241020 03:01:15.187" endtime="20241020 03:01:15.187"/>
+</return>
+<msg timestamp="20241020 03:01:15.187" level="INFO">${item-price} = 120</msg>
+<status status="PASS" starttime="20241020 03:01:15.180" endtime="20241020 03:01:15.187"/>
+</kw>
+<kw name="user verify quantity" library="home_page">
+<var>${item-quantity}</var>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${q}</var>
+<arg>${quantity-path}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.196" level="INFO">${q} = 5</msg>
+<status status="PASS" starttime="20241020 03:01:15.187" endtime="20241020 03:01:15.196"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<arg>${q}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" starttime="20241020 03:01:15.196" endtime="20241020 03:01:15.196"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${q}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" starttime="20241020 03:01:15.196" endtime="20241020 03:01:15.196"/>
+</kw>
+<return>
+<value>${q}</value>
+<status status="PASS" starttime="20241020 03:01:15.196" endtime="20241020 03:01:15.196"/>
+</return>
+<msg timestamp="20241020 03:01:15.196" level="INFO">${item-quantity} = 5</msg>
+<status status="PASS" starttime="20241020 03:01:15.187" endtime="20241020 03:01:15.196"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${f-price}</var>
+<arg>${item-price}*${item-quantity}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20241020 03:01:15.196" level="INFO">${f-price} = 600</msg>
+<status status="PASS" starttime="20241020 03:01:15.196" endtime="20241020 03:01:15.196"/>
+</kw>
+<kw name="Should Be Equal As Numbers" library="BuiltIn">
+<arg>${f-price}</arg>
+<arg>600</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<msg timestamp="20241020 03:01:15.196" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20241020 03:01:15.196" endtime="20241020 03:01:15.196"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:15.180" endtime="20241020 03:01:15.196"/>
+</kw>
+<kw name="user add 5-kg of broklli to add to card" library="home_page">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${AddTo-card-button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:15.197" level="INFO">Clicking button '//div[@class='product' and h4[contains(text(),'Brocolli - 1 Kg')]]//div[@class='product-action']//button'.</msg>
+<status status="PASS" starttime="20241020 03:01:15.196" endtime="20241020 03:01:15.240"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:17.242" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:15.240" endtime="20241020 03:01:17.243"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:15.196" endtime="20241020 03:01:17.243"/>
+</kw>
+<kw name="user click on cart icon" library="home_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cart-icon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:17.246" level="INFO">Clicking element '//a[@class='cart-icon']'.</msg>
+<status status="PASS" starttime="20241020 03:01:17.245" endtime="20241020 03:01:17.296"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:19.297" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:17.296" endtime="20241020 03:01:19.297"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:17.244" endtime="20241020 03:01:19.297"/>
+</kw>
+<kw name="user click on procced to checkout button" library="home_page">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${processToCheckout-Button}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20241020 03:01:19.326" level="INFO">Element '//div[@class='action-block']//button' is displayed.</msg>
+<status status="PASS" starttime="20241020 03:01:19.298" endtime="20241020 03:01:19.326"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:21.329" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:19.326" endtime="20241020 03:01:21.329"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${processToCheckout-Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:21.331" level="INFO">Clicking button '//div[@class='action-block']//button'.</msg>
+<status status="PASS" starttime="20241020 03:01:21.330" endtime="20241020 03:01:21.392"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:23.394" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:21.392" endtime="20241020 03:01:23.394"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:19.298" endtime="20241020 03:01:23.394"/>
+</kw>
+<kw name="user verify product name in checkout table" library="checkout_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name_header}</var>
+<arg>${product_name_header}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:23.420" level="INFO">${product_name_header} = Product Name</msg>
+<status status="PASS" starttime="20241020 03:01:23.397" endtime="20241020 03:01:23.420"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_name_header}</arg>
+<arg>Product Name</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:23.420" endtime="20241020 03:01:23.420"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name_value}</var>
+<arg>${product_name_value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:23.433" level="INFO">${product_name_value} = Brocolli - 1 Kg</msg>
+<status status="PASS" starttime="20241020 03:01:23.420" endtime="20241020 03:01:23.433"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_name_value}</arg>
+<arg>Brocolli - 1 Kg</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:23.433" endtime="20241020 03:01:23.434"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:24.436" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 03:01:23.434" endtime="20241020 03:01:24.436"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:23.396" endtime="20241020 03:01:24.436"/>
+</kw>
+<kw name="user verify product Quantity in checkout table" library="checkout_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_quantity_header}</var>
+<arg>${product_quantity_header}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:24.460" level="INFO">${product_quantity_header} = Quantiry</msg>
+<status status="PASS" starttime="20241020 03:01:24.438" endtime="20241020 03:01:24.460"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_quantity_header}</arg>
+<arg>Quantiry</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:24.460" endtime="20241020 03:01:24.460"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_quantity_value}</var>
+<arg>${product_quantity_value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:24.474" level="INFO">${product_quantity_value} = 5</msg>
+<status status="PASS" starttime="20241020 03:01:24.460" endtime="20241020 03:01:24.474"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_quantity_value}</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:24.474" endtime="20241020 03:01:24.474"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:25.474" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 03:01:24.474" endtime="20241020 03:01:25.475"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:24.437" endtime="20241020 03:01:25.475"/>
+</kw>
+<kw name="user verify product Price in checkout table" library="checkout_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_price_header}</var>
+<arg>${product_price_header}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:25.494" level="INFO">${product_price_header} = Price</msg>
+<status status="PASS" starttime="20241020 03:01:25.475" endtime="20241020 03:01:25.494"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_price_header}</arg>
+<arg>Price</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:25.495" endtime="20241020 03:01:25.495"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_price_value}</var>
+<arg>${product_price_value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:25.508" level="INFO">${product_price_value} = 120</msg>
+<status status="PASS" starttime="20241020 03:01:25.495" endtime="20241020 03:01:25.508"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_price_value}</arg>
+<arg>120</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:25.508" endtime="20241020 03:01:25.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:26.510" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 03:01:25.508" endtime="20241020 03:01:26.510"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:25.475" endtime="20241020 03:01:26.510"/>
+</kw>
+<kw name="user verify product Total Price in checkout table" library="checkout_keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_total_header}</var>
+<arg>${product_total_header}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:26.522" level="INFO">${product_total_header} = Total</msg>
+<status status="PASS" starttime="20241020 03:01:26.511" endtime="20241020 03:01:26.522"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_total_header}</arg>
+<arg>Total</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:26.522" endtime="20241020 03:01:26.522"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_total_value}</var>
+<arg>${product_total_value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:26.532" level="INFO">${product_total_value} = 600</msg>
+<status status="PASS" starttime="20241020 03:01:26.522" endtime="20241020 03:01:26.532"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_total_value}</arg>
+<arg>600</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20241020 03:01:26.532" endtime="20241020 03:01:26.532"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:27.533" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20241020 03:01:26.532" endtime="20241020 03:01:27.533"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:26.511" endtime="20241020 03:01:27.533"/>
+</kw>
+<kw name="user click on place order button" library="checkout_keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${place_order_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:27.534" level="INFO">Clicking button '//button[contains(text(),'Place Order')]'.</msg>
+<status status="PASS" starttime="20241020 03:01:27.533" endtime="20241020 03:01:27.575"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:30.576" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:27.576" endtime="20241020 03:01:30.577"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:27.533" endtime="20241020 03:01:30.577"/>
+</kw>
+<kw name="user select iraq in choose country" library="checkout_keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${select_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:30.580" level="INFO">Clicking element '//select'.</msg>
+<status status="PASS" starttime="20241020 03:01:30.579" endtime="20241020 03:01:30.656"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:35.659" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:30.656" endtime="20241020 03:01:35.660"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${select_element}</arg>
+<arg>Iraq</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20241020 03:01:35.663" level="INFO">Selecting options from selection list '//select' by value Iraq.</msg>
+<status status="PASS" starttime="20241020 03:01:35.660" endtime="20241020 03:01:35.720"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:38.722" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:35.720" endtime="20241020 03:01:38.723"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:30.578" endtime="20241020 03:01:38.723"/>
+</kw>
+<kw name="user select condition and agreements" library="checkout_keywords">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${select_agreements}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:38.723" level="INFO">Selecting checkbox '//input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20241020 03:01:38.723" endtime="20241020 03:01:38.785"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:41.787" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:38.785" endtime="20241020 03:01:41.788"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:38.723" endtime="20241020 03:01:41.788"/>
+</kw>
+<kw name="user click on proceed button" library="checkout_keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${proceed_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20241020 03:01:41.791" level="INFO">Clicking button '//button[contains(text(),'Proceed')]'.</msg>
+<status status="PASS" starttime="20241020 03:01:41.790" endtime="20241020 03:01:41.830"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20241020 03:01:44.833" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20241020 03:01:41.831" endtime="20241020 03:01:44.833"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:41.789" endtime="20241020 03:01:44.833"/>
+</kw>
+<status status="PASS" starttime="20241020 03:01:08.976" endtime="20241020 03:01:44.834"/>
+</test>
+<status status="PASS" starttime="20241020 03:01:08.920" endtime="20241020 03:01:44.836"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Run">Run</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
