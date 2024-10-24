@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../Keywords/home_page.robot
-Resource    ../Keywords/checkout_keywords.robot
+Resource    ../Keywords/home_page.resource
+Resource    ../Keywords/checkout_keywords.resource
 
 *** Test Cases ***
 run and buy 5-kg of Brocolli
