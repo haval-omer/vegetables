@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Variables/checkout_page.robot
+Resource    ../Resources/checkout_page.resource
 
 *** Keywords ***
 verify checkout page is loaded

@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../Variables/home_page_var.robot
+Resource    ../Resources/home_page_var.resource
 
 *** Keywords ***
 user open web site
