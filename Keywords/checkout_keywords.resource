@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    Collections
 Resource    ../Resources/checkout_page.resource
 
 *** Keywords ***
@@ -7,34 +8,35 @@ verify checkout page is loaded
     wait until element is visible    ${table_path}
     sleep    2s
 
-user verify product name in checkout table
-    ${product_name_header}    get text    ${product_name_header}
-    should be equal as strings   ${product_name_header}   Product Name
-    ${product_name_value}    get text    ${product_name_value}
-    should be equal as strings    ${product_name_value}    Brocolli - 1 Kg
+user get product table values
+
+    #product name value
+    ${product_name_table}    get text    ${product_name_value}
+    should be equal as strings    ${product_name_table}    Brocolli - 1 Kg
+   sleep    2s
+
+    #product quantity in table
+    ${product_quantity_table}    get text    ${product_quantity_value}
+    should be equal as strings    ${product_quantity_table}    5
     sleep    2s
 
-user verify product Quantity in checkout table
-    ${product_quantity_header}    get text    ${product_quantity_header}
-    should be equal as strings   ${product_quantity_header}   Quantiry
-    ${product_quantity_value}    get text    ${product_quantity_value}
-    should be equal as strings    ${product_quantity_value}    5
+    #product price in table
+    ${product_price_table}    get text    ${product_price_value}
+    should be equal as strings    ${product_price_table}    120
     sleep    2s
 
-user verify product Price in checkout table
-    ${product_price_header}    get text    ${product_price_header}
-    should be equal as strings   ${product_price_header}   Price
-    ${product_price_value}    get text    ${product_price_value}
-    should be equal as strings    ${product_price_value}    120
+    #product total price in table
+    ${product_total_table}    get text    ${product_total_value}
+    ${product_total_table}    convert to number   ${product_total_table}
+    should be equal as numbers    ${product_total_table}    600
     sleep    2s
+    ${product_table_values}    create list    ${product_name_table}    ${product_quantity_table}   ${product_price_table}   ${product_total_table}
+    RETURN    ${product_table_values}
 
-user verify product Total Price in checkout table
-    ${product_total_header}    get text    ${product_total_header}
-    should be equal as strings   ${product_total_header}   Total
-    ${product_total_value}    get text    ${product_total_value}
-    should be equal as strings    ${product_total_value}    600
-    sleep    2s
-
+verify table values with initial values
+    [Arguments]    ${product_values}  ${pruduct_table_values}
+     lists should be equal    ${product_values}    ${pruduct_table_values}
+     log to console    lists are equal
 user click on place order button
    click button    ${place_order_button}
    sleep    2s

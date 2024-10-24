@@ -1,0 +1,9 @@
+git checkout branch             is used to change branches
+git checkout -b branch-name     is used to create new branch
+git status                      is used to verify if has changes  or not
+git add                         is used to add changed files
+git commit -m "commit message"  is used to comment on your changes
+git push "ssh link"             is used to push your last changes to your remote
+git pull origin remote-name     is used to pull latest updates from main remote
+pull request                    is used to review your codes after you push your changes and other contributor will review your code and merge your branch with main
+clone project                   is used to clone others project to your IDE

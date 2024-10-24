@@ -13,27 +13,27 @@ user select 5-kg of brocolli
     click element    ${increment-path}
     END
 
-user verify product name
+user verify product
+    #verify produxt name
     ${product_name}     get text    ${Brocolli_product_name}
     should be equal as strings    ${product_name}    Brocolli - 1 Kg
 
-user verify quantity
-   ${q}      get value    ${quantity-path}
-   convert to number    ${q}
-   should be equal as numbers    ${q}    5
-   RETURN    ${q}
-user verify single price
+    #verify product quantity
+   ${quantity}      get value    ${quantity-path}
+   convert to number    ${quantity}
+   should be equal as numbers    ${quantity}    5
+
+    #verify product single price
     ${price}    get text    ${Brocolli_price}
     convert to number     ${price}
     should be equal as numbers   ${price}    120
-    RETURN    ${price}
 
-user verify final price
-    ${item-price}       user verify single price
-    ${item-quantity}     user verify quantity
-    ${f-price}   Evaluate   ${item-price}*${item-quantity}
-    should be equal as numbers    ${f-price}    600
+    #verify total orice
+    ${total_price}   Evaluate   ${quantity}*${price}
+    should be equal as numbers    ${total_price}    600
 
+    ${product_init_values}    create list   ${product_name}    ${quantity}    ${price}    ${total_price}
+    RETURN    ${product_init_values}
 user add 5-kg of broklli to add to card
     click button    ${AddTo-card-button}
     sleep    3s
